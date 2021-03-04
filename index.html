@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="overlay fadeImage">
-    <header class="banner">
+    <header id="top" class="banner">
             <section class="intro">
                 <header>
                     <h1>Hello, I'm Quincy Elery.</h1>
@@ -19,14 +19,14 @@
                 <div class="flex">
                     <p class="subtext">Aspiring software developer.<br>
                         Learning more every day.</p>
-                    <a class="btn" href="#">Learn More --> </a> <!-- Maybe replace this with arrow img or special font? -->
+                    <a class="btn" id="startButton">Learn More <i class="fas fa-arrow-right"></i></a> <!-- Maybe replace this with arrow img or special font? -->
                 </div>
             </section>
     </header>
     </div>
     <main>
         <div class="flex row">
-            <article class="tile tile-style1 narrow">
+            <article id="start" class="tile tile-style1 narrow">
                 <header>
                     <h3>About Me</h3>
                     <p>Put my sample text here</p>
@@ -63,6 +63,10 @@
         </div>
     </main>
     <footer></footer>
+    <div id="toTopButton">
+        <i class="fas fa-arrow-up"></i>
+    </div>
     <script src="scripts/overlayFade.js"></script>
+    <script src="scripts/smoothScroll.js"></script>
 </body>
 </html>
