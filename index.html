@@ -9,19 +9,21 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="banner"> <!-- Put background on this. Want section to take up most of screen. -->
-        <section class="intro">
-            <header>
-                <h1>Hello, I'm Quincy Elery.</h1>
-                <hr>
-            </header>
-            <div class="flex">
-                <p class="subtext">Aspiring software developer.<br>
-                    Learning more every day.</p>
-                <a class="btn" href="#">Learn More --> </a> <!-- Maybe replace this with image of arrow? -->
-            </div>
-        </section>
+    <div class="overlay fadeImage">
+    <header class="banner">
+            <section class="intro">
+                <header>
+                    <h1>Hello, I'm Quincy Elery.</h1>
+                    <hr>
+                </header>
+                <div class="flex">
+                    <p class="subtext">Aspiring software developer.<br>
+                        Learning more every day.</p>
+                    <a class="btn" href="#">Learn More --> </a> <!-- Maybe replace this with arrow img or special font? -->
+                </div>
+            </section>
     </header>
+    </div>
     <main>
         <div class="flex row">
             <article class="tile tile-style1 narrow">
@@ -61,5 +63,6 @@
         </div>
     </main>
     <footer></footer>
+    <script src="scripts/overlayFade.js"></script>
 </body>
 </html>

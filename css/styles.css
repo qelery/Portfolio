@@ -48,24 +48,60 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20em 0;
-    background-color: #5a45ff; /* Replace with background image */
+    padding: 28em 0;
+    transition: all 1s;
+}
+
+.overlay {
+    position: relative;
+    background-color: inherit;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url("../images/code.png");
+    z-index: 1;
+}
+
+/* variable needed to manipulate pseudoclass (::after) with JavaScript */
+.overlay {
+    --fade-background: rgba(90, 69, 255, 1);
+}
+
+.overlay::after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: inherit;
+    background-color: var(--fade-background);
+    z-index: -1;
+}
+
+.overlay::after {
+    animation: fadein 1.75s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 .intro {
+    position: relative;
     width: 80%;
 }
 
 .intro .subtext {
     padding: 0 1.25em 0 0;
-    font-size: 1.2em;
+    font-size: 1.4em;
     letter-spacing: 1px;
 }
 
 .row {
     align-items: stretch;
     height: 32em;
-    background: orange;
 }
 
 article.tile {
