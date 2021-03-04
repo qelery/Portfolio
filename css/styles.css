@@ -6,6 +6,7 @@ body {
     font-family: Helvetica, serif;
     font-size: 12pt;
     color: #fff;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -87,6 +88,66 @@ a {
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+@keyframes movesDown {
+    from { transform: translateY(0) }
+    to { transform: translateY(20%) }
+}
+
+@keyframes movesUp {
+    from { transform: translateY(40%) }
+    to { transform: translateY(0) }
+}
+
+@keyframes leftMovesRight {
+    from { transform: translateX(0) }
+    to { transform: translateX(-40%) }
+}
+
+@keyframes leftToHomePosition {
+    from { transform: translateX(-20%) }
+    to { transform: translateX(0%) }
+}
+
+@keyframes rightMovesLeft {
+    from { transform: translateX(0) }
+    to { transform: translateX(20%) }
+}
+
+@keyframes rightToHomePosition {
+    from { transform: translateX(20%) }
+    to { transform: translateX(0%) }
+}
+
+.movesDown {
+    animation: movesDown 2s;
+    animation-fill-mode: forwards;
+}
+
+.movesUp {
+    animation: movesUp 1.25s;
+    animation-fill-mode: forwards;
+}
+
+.leftMovesRight {
+    animation: leftMovesRight 2s;
+    animation-fill-mode: forwards;
+}
+
+.leftToHomePosition {
+    animation: leftToHomePosition 1.25s;
+    animation-fill-mode: forwards;
+}
+
+.rightMovesLeft {
+    animation: rightMovesLeft 2s;
+    animation-fill-mode: forwards;
+}
+
+.rightToHomePosition {
+    animation: rightToHomePosition 1.25s;
+    animation-fill-mode: forwards;
 }
 
 .intro {
